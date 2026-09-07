@@ -1,0 +1,190 @@
+.hero-section {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+}
+
+.hero-section__container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-section__content {
+  max-width: 920px;
+}
+
+.hero-section__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.12), rgba(6, 182, 212, 0.12));
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  font-size: 0.825rem;
+  font-weight: 600;
+  color: #a5b4fc;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 20px rgba(99, 102, 241, 0.15);
+}
+
+.hero-section__badge-icon {
+  color: #38bdf8;
+}
+
+.hero-section__headline {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+  margin-bottom: 1.25rem;
+}
+
+.hero-section__gradient-text {
+  background: linear-gradient(135deg, #6366f1 0%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-section__gradient-text--alt {
+  background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-section__subtext {
+  font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+  line-height: 1.6;
+  color: var(--text-secondary);
+  max-width: 780px;
+  margin-bottom: 2rem;
+}
+
+.hero-section__pillars {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-bottom: 2.5rem;
+}
+
+.hero-pillar {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 0.85rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.hero-pillar:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(99, 102, 241, 0.4);
+  color: var(--text-primary);
+  transform: translateY(-2px);
+}
+
+.hero-section__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3.5rem;
+}
+
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.6rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-out);
+  border: none;
+}
+
+.btn--primary {
+  background: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);
+  color: #ffffff;
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
+}
+
+.btn--primary:hover {
+  box-shadow: 0 6px 30px rgba(99, 102, 241, 0.6);
+  transform: translateY(-2px);
+}
+
+.btn--secondary {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-hover);
+  color: var(--text-primary);
+}
+
+.btn--secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(99, 102, 241, 0.5);
+  transform: translateY(-2px);
+}
+
+.hero-btn--ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-tertiary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 0.75rem 1rem;
+  transition: color var(--duration-fast);
+}
+
+.hero-btn--ghost:hover {
+  color: var(--text-primary);
+}
+
+.hero-section__meta {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-primary);
+}
+
+.meta-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 1rem 1.25rem;
+  background: rgba(18, 18, 28, 0.4);
+  border: 1px solid var(--border-secondary);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(8px);
+}
+
+.meta-card__label {
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  color: #38bdf8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.meta-card__value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.meta-card__sub {
+  font-size: 0.8rem;
+  color: var(--text-tertiary);
+}

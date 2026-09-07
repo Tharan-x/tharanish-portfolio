@@ -1,0 +1,155 @@
+/* ============================================
+   DESIGN SYSTEM — CSS Custom Properties
+   ============================================ */
+
+:root {
+  /* --- Color Palette --- */
+  --accent-h: 245;
+  --accent-s: 58%;
+  --accent-l: 58%;
+  --accent: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
+  --accent-light: hsl(var(--accent-h), var(--accent-s), 72%);
+  --accent-dark: hsl(var(--accent-h), var(--accent-s), 44%);
+  --accent-subtle: hsl(var(--accent-h), 30%, 94%);
+  --accent-glow: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.15);
+
+  /* --- Typography --- */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 2rem;
+  --text-4xl: 2.5rem;
+  --text-5xl: 3.25rem;
+  --text-6xl: 4rem;
+
+  --leading-tight: 1.15;
+  --leading-snug: 1.3;
+  --leading-normal: 1.6;
+
+  --weight-normal: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* --- Spacing --- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* --- Layout --- */
+  --container-max: 1200px;
+  --container-narrow: 900px;
+  --container-wide: 1400px;
+  --content-padding: var(--space-6);
+
+  /* --- Borders --- */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* --- Transitions --- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 400ms;
+  --duration-slower: 600ms;
+
+  /* --- Shadows --- */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.15);
+
+  /* --- Z-Index --- */
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-overlay: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+}
+
+/* ============================================
+   DARK THEME (Default)
+   ============================================ */
+[data-theme='dark'] {
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #12121a;
+  --bg-tertiary: #1a1a26;
+  --bg-elevated: #1e1e2e;
+  --bg-card: #16161f;
+  --bg-card-hover: #1c1c2a;
+
+  --text-primary: #e8e8ed;
+  --text-secondary: #a0a0b0;
+  --text-tertiary: #6b6b80;
+  --text-inverse: #0a0a0f;
+
+  --border-primary: rgba(255, 255, 255, 0.08);
+  --border-secondary: rgba(255, 255, 255, 0.04);
+  --border-hover: rgba(255, 255, 255, 0.14);
+
+  --surface-glass: rgba(18, 18, 26, 0.8);
+  --surface-glass-border: rgba(255, 255, 255, 0.06);
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.5);
+
+  --code-bg: #1a1a2e;
+
+  color-scheme: dark;
+}
+
+/* ============================================
+   LIGHT THEME
+   ============================================ */
+[data-theme='light'] {
+  --bg-primary: #fafafa;
+  --bg-secondary: #f2f2f5;
+  --bg-tertiary: #eaeaef;
+  --bg-elevated: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f5f5fa;
+
+  --text-primary: #1a1a2e;
+  --text-secondary: #52526a;
+  --text-tertiary: #8888a0;
+  --text-inverse: #fafafa;
+
+  --border-primary: rgba(0, 0, 0, 0.08);
+  --border-secondary: rgba(0, 0, 0, 0.04);
+  --border-hover: rgba(0, 0, 0, 0.14);
+
+  --surface-glass: rgba(255, 255, 255, 0.85);
+  --surface-glass-border: rgba(0, 0, 0, 0.06);
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.1);
+
+  --code-bg: #f0f0f5;
+
+  --accent-subtle: hsl(var(--accent-h), 30%, 94%);
+
+  color-scheme: light;
+}
