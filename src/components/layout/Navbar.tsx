@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Sun, Moon, Sparkles } from 'lucide-react';
+import { Menu, X, Sun, Moon, Sparkles, FileText } from 'lucide-react';
+import { profile } from '../../data/profile';
 import type { SectionKey } from '../3d/SpatialCanvas3D';
 import './Navbar.css';
 
@@ -73,9 +74,30 @@ export default function Navbar({
               {activeSection === item.key && <span className="navbar__link-glow" />}
             </button>
           ))}
+          <a
+            href={profile.resumeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="navbar__link navbar__link--mobile-resume"
+            onClick={() => setIsOpen(false)}
+          >
+            <FileText size={14} />
+            <span>Resume</span>
+          </a>
         </div>
 
         <div className="navbar__actions">
+          <a
+            href={profile.resumeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="navbar__resume"
+            aria-label="View Resume PDF"
+          >
+            <FileText size={14} />
+            <span>Resume</span>
+          </a>
+
           <button
             className="navbar__quick-hire"
             onClick={() => handleNavClick('contact')}

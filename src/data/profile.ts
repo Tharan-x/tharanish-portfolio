@@ -16,6 +16,7 @@ export interface ProfileData {
   phone: string;
   linkedin: string;
   github: string;
+  resumeUrl: string;
   highlights: string[];
 }
 
@@ -38,6 +39,7 @@ export const profile: ProfileData = {
   phone: '+91 9361427171',
   linkedin: 'https://linkedin.com/in/tharanish-m-270321338',
   github: 'https://github.com/Tharan-x',
+  resumeUrl: `${import.meta.env.BASE_URL}Tharanish_M_Resume-4.pdf`,
   highlights: [
     'AI & Data Science Focus',
     'Data Analytics & BI',

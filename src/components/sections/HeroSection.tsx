@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, Code2, Cpu, BarChart3, Download } from 'lucide-react';
+import { ArrowRight, Sparkles, Code2, Cpu, BarChart3, Download, FileText } from 'lucide-react';
 import { profile } from '../../data/profile';
 import type { SectionKey } from '../3d/SpatialCanvas3D';
 import './HeroSection.css';
@@ -62,6 +62,16 @@ export default function HeroSection({ onNavigate }: HeroSectionProps) {
               <span>View Projects</span>
               <ArrowRight size={18} />
             </button>
+
+            <a
+              href={profile.resumeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn--secondary hero-btn"
+            >
+              <FileText size={18} />
+              <span>Resume</span>
+            </a>
 
             <button
               className="btn btn--secondary hero-btn"
